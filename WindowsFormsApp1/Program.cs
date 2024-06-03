@@ -16,7 +16,16 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Espresso, BeverageSize = BeverageSize.Small, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Americano, BeverageSize = BeverageSize.Medium, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Americano, BeverageSize = BeverageSize.Small, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Black, BeverageSize = BeverageSize.Large, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Macchiato, BeverageSize = BeverageSize.Medium, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Cappuccino, BeverageSize = BeverageSize.Small, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Mocha, BeverageSize = BeverageSize.Large, DateTranscation = DateTime.Now });
+            Data.coffeeList.Add(new Coffee() { CoffeeType = CoffeeType.Espresso, BeverageSize = BeverageSize.Small, DateTranscation = DateTime.Now });
+            Application.Run(new CoffeeList());
         }
     }
 }

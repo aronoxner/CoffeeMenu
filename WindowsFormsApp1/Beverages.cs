@@ -7,17 +7,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    enum BeverageSize
+    {
+        Small,
+        Medium,
+        Large
+    }
     internal abstract class Beverages
     {
-        private string bevaragesize;
-        public string BeverageSize { get { return bevaragesize.ToUpper(); } set { bevaragesize = value; } }
-        public bool ToGo { get; set; }
+        public BeverageSize BeverageSize {  get; set; }
 
-        public void OrderingSteps()
+
+        public void OrderingQuestions()
         {
-            MessageBox.Show("What type of beverage would you like?");
-            MessageBox.Show("What size of beverage do you want?");
-            MessageBoxButtons
+            MessageBox.Show("What type of beverage would you like to see?");
         }
     } 
 }
